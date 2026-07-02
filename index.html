@@ -364,25 +364,26 @@
 
         /* Integrantes */
         .integrantes-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;
-            max-width: 1000px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;
+            max-width: 1200px; margin: 0 auto;
         }
         .integrante-card {
-            text-align: center; padding: 30px; border-radius: 16px;
+            text-align: center; padding: 25px; border-radius: 16px;
             background: var(--color-dark-card); border: 1px solid rgba(255, 0, 170, 0.1); transition: all 0.4s;
         }
         .integrante-card:hover {
             border-color: rgba(255, 0, 170, 0.3); box-shadow: 0 15px 40px rgba(255, 0, 170, 0.1);
             transform: translateY(-5px);
         }
-        .integrante-avatar {
+        .integrante-img {
             width: 120px; height: 120px; border-radius: 50%;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-            margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;
-            font-family: var(--font-title); font-size: 2.5rem; color: var(--color-dark);
+            object-fit: cover;
+            border: 3px solid var(--color-primary);
+            margin: 0 auto 20px; display: block;
+            box-shadow: 0 0 20px rgba(255, 0, 170, 0.3);
         }
-        .integrante-card h3 { font-family: var(--font-title); font-size: 1.6rem; color: var(--color-primary); letter-spacing: 2px; margin-bottom: 5px; }
-        .integrante-card .role { color: var(--color-secondary); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; }
+        .integrante-card h3 { font-family: var(--font-title); font-size: 1.5rem; color: var(--color-primary); letter-spacing: 2px; margin-bottom: 5px; }
+        .integrante-card .role { color: var(--color-secondary); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; }
         .integrante-card p { color: var(--color-text-muted); font-size: 0.9rem; }
 
         /* Shows */
@@ -500,7 +501,8 @@
         /* Responsive */
         @media (max-width: 1024px) {
             .historia-grid, .galeria-grid { grid-template-columns: repeat(2, 1fr); }
-            .discografia-grid, .integrantes-grid, .equipos-grid, .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .discografia-grid, .equipos-grid, .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .integrantes-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 768px) {
             header { padding: 15px 20px; }
@@ -522,9 +524,9 @@
 <body>
     <!-- Header -->
     <header id="header">
-        <div class="logo">
+        <a href="#inicio" class="logo" style="text-decoration: none;">
             <img src="logo-barbeta.png" alt="BARBETA Logo" loading="lazy">
-        </div>
+        </a>
         <nav id="nav">
             <a href="#inicio">Inicio</a>
             <a href="#historia">Historia</a>
@@ -701,25 +703,31 @@
     <!-- Integrantes -->
     <section class="integrantes-section" id="integrantes">
         <h2 class="section-title reveal">INTEGRANTES</h2>
-        <p class="section-subtitle reveal">El power trio que hace vibrar el escenario</p>
+        <p class="section-subtitle reveal">La banda que hace vibrar el escenario</p>
         <div class="integrantes-grid">
             <div class="integrante-card reveal">
-                <div class="integrante-avatar">V</div>
-                <h3>Voz & Guitarra</h3>
-                <p class="role">Vocalista Principal</p>
-                <p>Líder y voz principal de la banda. Su estilo vocal distintivo y riffs potentes definen el sonido de Barbeta.</p>
+                <img src="integrante-bajo-vocal.jpg" alt="ESTEBOOM" class="integrante-img" loading="lazy" onclick="openLightbox('integrante-bajo-vocal.jpg')" style="cursor:pointer;">
+                <h3>ESTEBOOM</h3>
+                <p class="role">Vocalista y Bajista</p>
+                <p>Voz principal y líneas de bajo contundentes. La combinación perfecta de melodía y groove en el escenario.</p>
             </div>
             <div class="integrante-card reveal">
-                <div class="integrante-avatar">B</div>
-                <h3>Bajo</h3>
-                <p class="role">Bajista</p>
-                <p>La base rítmica que sostiene cada canción con líneas de bajo contundentes y llenas de groove.</p>
+                <img src="integrante-guitarra.jpg" alt="NACHOMAN" class="integrante-img" loading="lazy" onclick="openLightbox('integrante-guitarra.jpg')" style="cursor:pointer;">
+                <h3>NACHOMAN</h3>
+                <p class="role">Guitarrista</p>
+                <p>Riffs potentes y solos memorables. Su estilo define el sonido característico de Barbeta.</p>
             </div>
             <div class="integrante-card reveal">
-                <div class="integrante-avatar">D</div>
-                <h3>Batería</h3>
-                <p class="role">Baterista</p>
+                <img src="integrante-baterista-1.jpg" alt="SEBASTIAN" class="integrante-img" loading="lazy" onclick="openLightbox('integrante-baterista-1.jpg')" style="cursor:pointer;">
+                <h3>SEBASTIAN</h3>
+                <p class="role">Baterista Principal</p>
                 <p>La fuerza detrás del kit. Ritmos poderosos y dinámicos que impulsan cada presentación al máximo.</p>
+            </div>
+            <div class="integrante-card reveal">
+                <img src="integrante-baterista-2.jpg" alt="SEBASTIAN" class="integrante-img" loading="lazy" onclick="openLightbox('integrante-baterista-2.jpg')" style="cursor:pointer;">
+                <h3>SEBASTIAN</h3>
+                <p class="role">Baterista</p>
+                <p>Energía y precisión en cada golpe. Complementa la batería principal con matices únicos.</p>
             </div>
         </div>
     </section>
