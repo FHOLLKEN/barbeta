@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARBETA | Banda de Rock - Que Siga El Rock And Roll</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="BARBETA - Power trio de Garage Rock formado a mediados de 2010. Rock en vivo, producción musical y eventos. ¡Que siga el rock and roll!">
+    <meta name="keywords" content="BARBETA, banda de rock, garage rock, rock chileno, música en vivo, rock and roll, power trio">
+    <meta name="author" content="BARBETA">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="es-CL">
+    <meta name="geo.region" content="CL-RM">
+    <meta name="geo.placename" content="Santiago, Región Metropolitana, Chile">
+    <meta name="geo.position" content="-33.4489;-70.6693">
+    <meta name="ICBM" content="-33.4489, -70.6693">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://barbeta.cl/">
+    <meta property="og:title" content="BARBETA | Banda de Rock - Que Siga El Rock And Roll">
+    <meta property="og:description" content="Power trio de Garage Rock formado a mediados de 2010. Rock en vivo, producción musical y eventos.">
+    <meta property="og:image" content="https://barbeta.cl/logo-barbeta.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:site_name" content="BARBETA">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BARBETA | Banda de Rock">
+    <meta name="twitter:description" content="Power trio de Garage Rock. ¡Que siga el rock and roll!">
+    <meta name="twitter:image" content="https://barbeta.cl/logo-barbeta.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://barbeta.cl/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo-barbeta.png">
+    <link rel="apple-touch-icon" href="logo-barbeta.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#FF00AA">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "name": "BARBETA",
+                "alternateName": "Barbeta Banda de Rock",
+                "url": "https://barbeta.cl",
+                "logo": "https://barbeta.cl/logo-barbeta.png",
+                "description": "Power trio de Garage Rock formado a mediados de 2010",
+                "sameAs": [
+                    "https://www.instagram.com/barbetaoficial/"
+                ],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "Booking",
+                    "areaServed": "CL",
+                    "availableLanguage": ["es", "en"]
+                }
+            },
+            {
+                "@type": "MusicGroup",
+                "name": "BARBETA",
+                "genre": ["Garage Rock", "Rock", "Rock Chileno"],
+                "description": "Power trio de Garage Rock formado a mediados de 2010. Su sonido se distingue por la intensidad de sus riffs y la fusión de matices.",
+                "url": "https://barbeta.cl",
+                "image": "https://barbeta.cl/logo-barbeta.png",
+                "sameAs": [
+                    "https://www.instagram.com/barbetaoficial/"
+                ],
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Santiago",
+                    "addressRegion": "Región Metropolitana",
+                    "addressCountry": "CL"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": -33.4489,
+                    "longitude": -70.6693
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --color-primary: #FF00AA;
+            --color-secondary: #CCFF00;
+            --color-accent: #9900FF;
+            --color-dark: #0A0A0F;
+            --color-dark-light: #12121A;
+            --color-dark-card: #1A1A24;
+            --color-text: #E8E8F0;
+            --color-text-muted: #8888A0;
+            --font-title: 'Bebas Neue', sans-serif;
+            --font-body: 'Rajdhani', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--color-dark);
+            color: var(--color-text);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--color-dark); }
+        ::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 4px; }
+
+        /* Header */
+        header {
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+            padding: 15px 40px; display: flex; justify-content: space-between; align-items: center;
+            transition: all 0.3s ease; background: transparent;
+        }
+        header.scrolled {
+            background: rgba(10, 10, 15, 0.95); backdrop-filter: blur(10px);
+            box-shadow: 0 2px 30px rgba(255, 0, 170, 0.2);
+        }
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo img { height: 50px; width: auto; filter: drop-shadow(0 0 10px rgba(255, 0, 170, 0.5)); }
+        .logo-text {
+            font-family: var(--font-title); font-size: 2rem; color: var(--color-primary);
+            text-shadow: 0 0 20px rgba(255, 0, 170, 0.5); letter-spacing: 3px;
+        }
+
+        nav { display: flex; gap: 30px; }
+        nav a {
+            color: var(--color-text); text-decoration: none; font-weight: 600; font-size: 1rem;
+            text-transform: uppercase; letter-spacing: 2px; position: relative; transition: color 0.3s;
+        }
+        nav a::after {
+            content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px;
+            background: var(--color-secondary); transition: width 0.3s;
+        }
+        nav a:hover { color: var(--color-secondary); }
+        nav a:hover::after { width: 100%; }
+        .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+        .menu-toggle span { width: 30px; height: 3px; background: var(--color-primary); transition: all 0.3s; }
+
+        /* Hero */
+        .hero {
+            position: relative; height: 100vh; min-height: 600px;
+            display: flex; align-items: center; justify-content: center; overflow: hidden;
+        }
+        .hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+        .hero-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(180deg, rgba(10,10,15,0.3) 0%, rgba(10,10,15,0.7) 60%, var(--color-dark) 100%);
+            z-index: 2;
+        }
+        .hero-content { position: relative; z-index: 3; text-align: center; padding: 0 20px; max-width: 900px; }
+        .hero-logo {
+            width: 200px; max-width: 60vw; margin-bottom: 20px;
+            filter: drop-shadow(0 0 30px rgba(255, 0, 170, 0.6));
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { filter: drop-shadow(0 0 30px rgba(255, 0, 170, 0.6)); }
+            50% { filter: drop-shadow(0 0 50px rgba(255, 0, 170, 0.9)); }
+        }
+        .hero h1 {
+            font-family: var(--font-title); font-size: 5rem; color: var(--color-primary);
+            text-shadow: 0 0 30px rgba(255, 0, 170, 0.5), 0 0 60px rgba(153, 0, 255, 0.3);
+            letter-spacing: 8px; margin-bottom: 10px; line-height: 1;
+        }
+        .hero .slogan {
+            font-family: var(--font-title); font-size: 2rem; color: var(--color-secondary);
+            letter-spacing: 5px; text-shadow: 0 0 20px rgba(204, 255, 0, 0.4); margin-bottom: 30px;
+        }
+        .hero p { font-size: 1.2rem; color: var(--color-text-muted); max-width: 600px; margin: 0 auto 40px; }
+        .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+
+        .btn {
+            padding: 15px 40px; font-family: var(--font-body); font-weight: 700; font-size: 1rem;
+            text-transform: uppercase; letter-spacing: 3px; border: 2px solid var(--color-primary);
+            background: transparent; color: var(--color-primary); cursor: pointer; transition: all 0.3s;
+            text-decoration: none; display: inline-block; position: relative; overflow: hidden;
+        }
+        .btn::before {
+            content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+            background: var(--color-primary); transition: left 0.3s; z-index: -1;
+        }
+        .btn:hover { color: var(--color-dark); box-shadow: 0 0 30px rgba(255, 0, 170, 0.5); }
+        .btn:hover::before { left: 0; }
+        .btn-secondary { border-color: var(--color-secondary); color: var(--color-secondary); }
+        .btn-secondary::before { background: var(--color-secondary); }
+        .btn-secondary:hover { color: var(--color-dark); box-shadow: 0 0 30px rgba(204, 255, 0, 0.5); }
+
+        /* Marquee */
+        .marquee-section {
+            background: var(--color-dark-light); padding: 20px 0; overflow: hidden;
+            border-top: 1px solid rgba(255, 0, 170, 0.2); border-bottom: 1px solid rgba(255, 0, 170, 0.2);
+        }
+        .marquee { display: flex; white-space: nowrap; animation: marquee 20s linear infinite; }
+        .marquee-item {
+            font-family: var(--font-title); font-size: 1.5rem; color: var(--color-text-muted);
+            padding: 0 40px; display: flex; align-items: center; gap: 15px;
+        }
+        .marquee-item span { color: var(--color-primary); }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        /* Sections */
+        section { padding: 100px 40px; position: relative; }
+        .section-title {
+            font-family: var(--font-title); font-size: 3.5rem; color: var(--color-primary);
+            text-align: center; margin-bottom: 15px; letter-spacing: 5px;
+            text-shadow: 0 0 20px rgba(255, 0, 170, 0.3);
+        }
+        .discografia-logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .discografia-logo img {
+            width: 280px;
+            max-width: 70vw;
+            filter: drop-shadow(0 0 20px rgba(255, 0, 170, 0.4));
+        }
+        .section-subtitle {
+            text-align: center; color: var(--color-text-muted); font-size: 1.1rem;
+            margin-bottom: 60px; max-width: 600px; margin-left: auto; margin-right: auto;
+        }
+
+        /* Historia */
+        .historia-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;
+            max-width: 1200px; margin: 0 auto;
+        }
+        .historia-card {
+            background: var(--color-dark-card); border: 1px solid rgba(255, 0, 170, 0.15);
+            border-radius: 12px; overflow: hidden; transition: all 0.4s; position: relative;
+        }
+        .historia-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+            transform: scaleX(0); transition: transform 0.4s;
+        }
+        .historia-card:hover {
+            transform: translateY(-10px); border-color: rgba(255, 0, 170, 0.4);
+            box-shadow: 0 20px 40px rgba(255, 0, 170, 0.15);
+        }
+        .historia-card:hover::before { transform: scaleX(1); }
+        .historia-card img { width: 100%; height: 200px; object-fit: cover; transition: transform 0.4s; }
+        .historia-card:hover img { transform: scale(1.05); }
+        .historia-card-content { padding: 25px; }
+        .historia-card h3 {
+            font-family: var(--font-title); font-size: 1.8rem; color: var(--color-secondary);
+            margin-bottom: 10px; letter-spacing: 2px;
+        }
+        .historia-card p { color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; }
+
+        /* Video Showcase */
+        .video-showcase { background: var(--color-dark-light); padding: 100px 40px; }
+        .video-container {
+            max-width: 900px; margin: 0 auto; position: relative; border-radius: 16px;
+            overflow: hidden; border: 2px solid rgba(255, 0, 170, 0.2);
+            box-shadow: 0 0 60px rgba(255, 0, 170, 0.1);
+            display: flex; flex-direction: column; align-items: center;
+            background: var(--color-dark-card);
+        }
+        .video-container video { 
+            max-height: 70vh; 
+            width: auto; 
+            max-width: 100%; 
+            display: block;
+            background: var(--color-dark);
+        }
+
+        /* Galeria */
+        .galeria-filters {
+            display: flex; justify-content: center; gap: 15px; margin-bottom: 50px; flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 10px 25px; background: transparent; border: 1px solid rgba(255, 0, 170, 0.3);
+            color: var(--color-text-muted); font-family: var(--font-body); font-weight: 600;
+            font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; cursor: pointer;
+            transition: all 0.3s; border-radius: 30px;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--color-primary); border-color: var(--color-primary); color: var(--color-dark);
+            box-shadow: 0 0 20px rgba(255, 0, 170, 0.4);
+        }
+        .galeria-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+            max-width: 1300px; margin: 0 auto;
+        }
+        .galeria-item {
+            position: relative; border-radius: 12px; overflow: hidden; cursor: pointer;
+            aspect-ratio: 1; border: 1px solid rgba(255, 0, 170, 0.1); transition: all 0.3s;
+        }
+        .galeria-item:hover { border-color: rgba(255, 0, 170, 0.4); box-shadow: 0 10px 30px rgba(255, 0, 170, 0.2); }
+        .galeria-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+        .galeria-item:hover img { transform: scale(1.1); }
+        .galeria-item-overlay {
+            position: absolute; bottom: 0; left: 0; right: 0; padding: 20px;
+            background: linear-gradient(transparent, rgba(10,10,15,0.9));
+            transform: translateY(100%); transition: transform 0.3s;
+        }
+        .galeria-item:hover .galeria-item-overlay { transform: translateY(0); }
+        .galeria-item-overlay span {
+            color: var(--color-secondary); font-weight: 600; font-size: 0.9rem;
+            text-transform: uppercase; letter-spacing: 2px;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(10, 10, 15, 0.98); z-index: 9999;
+            align-items: center; justify-content: center; padding: 40px;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-width: 90%; max-height: 90vh; object-fit: contain; border-radius: 8px; box-shadow: 0 0 60px rgba(255, 0, 170, 0.3); }
+        .lightbox-close {
+            position: absolute; top: 30px; right: 40px; font-size: 3rem; color: var(--color-primary);
+            cursor: pointer; background: none; border: none; font-family: var(--font-title); transition: color 0.3s;
+        }
+        .lightbox-close:hover { color: var(--color-secondary); }
+
+        /* Discografia */
+        .discografia-section { background: var(--color-dark-light); }
+        .discografia-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;
+            max-width: 1100px; margin: 0 auto;
+        }
+        .disco-card {
+            background: var(--color-dark-card); border-radius: 16px; padding: 40px 30px;
+            text-align: center; border: 1px solid rgba(255, 0, 170, 0.1); transition: all 0.4s;
+            position: relative; overflow: hidden;
+        }
+        .disco-card::before {
+            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(255, 0, 170, 0.05) 0%, transparent 70%);
+            opacity: 0; transition: opacity 0.4s;
+        }
+        .disco-card:hover {
+            transform: translateY(-10px); border-color: rgba(255, 0, 170, 0.3);
+            box-shadow: 0 20px 50px rgba(255, 0, 170, 0.15);
+        }
+        .disco-card:hover::before { opacity: 1; }
+        .disco-icon { font-size: 3rem; margin-bottom: 20px; display: block; }
+        .disco-card h3 { font-family: var(--font-title); font-size: 1.8rem; color: var(--color-secondary); margin-bottom: 10px; letter-spacing: 2px; }
+        .disco-card p { color: var(--color-text-muted); font-size: 0.95rem; }
+
+        /* Integrantes */
+        .integrantes-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;
+            max-width: 1000px; margin: 0 auto;
+        }
+        .integrante-card {
+            text-align: center; padding: 30px; border-radius: 16px;
+            background: var(--color-dark-card); border: 1px solid rgba(255, 0, 170, 0.1); transition: all 0.4s;
+        }
+        .integrante-card:hover {
+            border-color: rgba(255, 0, 170, 0.3); box-shadow: 0 15px 40px rgba(255, 0, 170, 0.1);
+            transform: translateY(-5px);
+        }
+        .integrante-avatar {
+            width: 120px; height: 120px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-title); font-size: 2.5rem; color: var(--color-dark);
+        }
+        .integrante-card h3 { font-family: var(--font-title); font-size: 1.6rem; color: var(--color-primary); letter-spacing: 2px; margin-bottom: 5px; }
+        .integrante-card .role { color: var(--color-secondary); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; }
+        .integrante-card p { color: var(--color-text-muted); font-size: 0.9rem; }
+
+        /* Shows */
+        .shows-section { background: var(--color-dark-light); }
+        .shows-list { max-width: 800px; margin: 0 auto; }
+        .show-item {
+            display: flex; align-items: center; gap: 30px; padding: 25px 30px;
+            background: var(--color-dark-card); border-radius: 12px; margin-bottom: 15px;
+            border: 1px solid rgba(255, 0, 170, 0.1); transition: all 0.3s;
+        }
+        .show-item:hover { border-color: rgba(255, 0, 170, 0.3); transform: translateX(10px); box-shadow: 0 10px 30px rgba(255, 0, 170, 0.1); }
+        .show-date { text-align: center; min-width: 80px; }
+        .show-date .day { font-family: var(--font-title); font-size: 2.5rem; color: var(--color-primary); line-height: 1; }
+        .show-date .month { font-size: 0.9rem; color: var(--color-secondary); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
+        .show-info h4 { font-family: var(--font-title); font-size: 1.4rem; color: var(--color-text); letter-spacing: 2px; margin-bottom: 5px; }
+        .show-info p { color: var(--color-text-muted); font-size: 0.9rem; }
+        .show-btn {
+            margin-left: auto; padding: 10px 25px; background: transparent; border: 1px solid var(--color-primary);
+            color: var(--color-primary); font-family: var(--font-body); font-weight: 600; font-size: 0.8rem;
+            text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: all 0.3s; white-space: nowrap;
+        }
+        .show-btn:hover { background: var(--color-primary); color: var(--color-dark); }
+
+        /* Equipos */
+        .equipos-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+            max-width: 1000px; margin: 0 auto;
+        }
+        .equipo-card {
+            background: var(--color-dark-card); border-radius: 12px; padding: 30px;
+            text-align: center; border: 1px solid rgba(255, 0, 170, 0.1); transition: all 0.3s;
+        }
+        .equipo-card:hover { border-color: rgba(255, 0, 170, 0.3); transform: translateY(-5px); }
+        .equipo-card .icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .equipo-card h3 { font-family: var(--font-title); font-size: 1.5rem; color: var(--color-secondary); margin-bottom: 10px; letter-spacing: 2px; }
+        .equipo-card p { color: var(--color-text-muted); font-size: 0.9rem; }
+
+        /* Features */
+        .features-section { background: var(--color-dark-light); }
+        .features-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;
+            max-width: 1100px; margin: 0 auto;
+        }
+        .feature-card {
+            text-align: center; padding: 40px 30px; border-radius: 16px;
+            background: var(--color-dark-card); border: 1px solid rgba(255, 0, 170, 0.1); transition: all 0.4s;
+        }
+        .feature-card:hover { border-color: rgba(255, 0, 170, 0.3); box-shadow: 0 15px 40px rgba(255, 0, 170, 0.1); transform: translateY(-5px); }
+        .feature-icon {
+            width: 80px; height: 80px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 25px; font-size: 2rem;
+        }
+        .feature-card h3 { font-family: var(--font-title); font-size: 1.6rem; color: var(--color-secondary); margin-bottom: 15px; letter-spacing: 2px; }
+        .feature-card p { color: var(--color-text-muted); font-size: 0.95rem; }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(255, 0, 170, 0.1), rgba(153, 0, 255, 0.1));
+            text-align: center; padding: 120px 40px; position: relative; overflow: hidden;
+        }
+        .cta-section::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="rgba(255,0,170,0.1)"/></svg>');
+            background-size: 50px 50px; opacity: 0.5;
+        }
+        .cta-section h2 {
+            font-family: var(--font-title); font-size: 4rem; color: var(--color-primary);
+            margin-bottom: 20px; letter-spacing: 5px; text-shadow: 0 0 30px rgba(255, 0, 170, 0.3); position: relative;
+        }
+        .cta-section p { color: var(--color-text-muted); font-size: 1.2rem; max-width: 600px; margin: 0 auto 40px; position: relative; }
+
+        /* Mapa */
+        .mapa-section { padding: 0; height: 400px; position: relative; }
+        .mapa-section iframe { width: 100%; height: 100%; border: none; filter: grayscale(100%) invert(92%) contrast(83%); }
+
+        /* Contacto */
+        .contacto-section { background: var(--color-dark); padding: 80px 40px; }
+        .contacto-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px;
+            max-width: 800px; margin: 0 auto;
+        }
+        .contacto-card {
+            background: var(--color-dark-card); border-radius: 16px; padding: 40px;
+            text-align: center; border: 1px solid rgba(255, 0, 170, 0.1); transition: all 0.4s;
+            text-decoration: none; display: block;
+        }
+        .contacto-card:hover { border-color: rgba(255, 0, 170, 0.4); box-shadow: 0 15px 40px rgba(255, 0, 170, 0.15); transform: translateY(-5px); }
+        .contacto-card .icon { font-size: 3rem; margin-bottom: 20px; display: block; }
+        .contacto-card h3 { font-family: var(--font-title); font-size: 1.8rem; color: var(--color-primary); margin-bottom: 10px; letter-spacing: 2px; }
+        .contacto-card p { color: var(--color-text-muted); font-size: 1rem; }
+
+        /* Footer */
+        footer {
+            background: var(--color-dark-light); padding: 60px 40px 30px;
+            text-align: center; border-top: 1px solid rgba(255, 0, 170, 0.1);
+        }
+        .footer-logo { width: 100px; margin-bottom: 20px; filter: drop-shadow(0 0 15px rgba(255, 0, 170, 0.3)); }
+        footer h3 { font-family: var(--font-title); font-size: 2rem; color: var(--color-primary); margin-bottom: 10px; letter-spacing: 3px; }
+        footer p { color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 30px; }
+        .footer-social { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; }
+        .footer-social a {
+            width: 50px; height: 50px; border-radius: 50%; border: 1px solid rgba(255, 0, 170, 0.3);
+            display: flex; align-items: center; justify-content: center; color: var(--color-primary);
+            font-size: 1.3rem; text-decoration: none; transition: all 0.3s;
+        }
+        .footer-social a:hover { background: var(--color-primary); color: var(--color-dark); border-color: var(--color-primary); box-shadow: 0 0 20px rgba(255, 0, 170, 0.4); }
+        .footer-copy { border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 20px; color: var(--color-text-muted); font-size: 0.8rem; }
+
+        /* Animations */
+        .reveal { opacity: 0; transform: translateY(50px); transition: all 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .historia-grid, .galeria-grid { grid-template-columns: repeat(2, 1fr); }
+            .discografia-grid, .integrantes-grid, .equipos-grid, .features-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; }
+            nav { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(10, 10, 15, 0.98); flex-direction: column; padding: 20px; gap: 20px; }
+            nav.active { display: flex; }
+            .menu-toggle { display: flex; }
+            .hero h1 { font-size: 3rem; }
+            .hero .slogan { font-size: 1.3rem; }
+            .section-title { font-size: 2.5rem; }
+            .historia-grid, .galeria-grid, .discografia-grid, .integrantes-grid, .equipos-grid, .features-grid, .contacto-grid { grid-template-columns: 1fr; }
+            .show-item { flex-direction: column; text-align: center; gap: 15px; }
+            .show-btn { margin-left: 0; }
+            .cta-section h2 { font-size: 2.5rem; }
+            section { padding: 60px 20px; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="logo">
+            <img src="logo-barbeta.png" alt="BARBETA Logo" loading="lazy">
+        </div>
+        <nav id="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#historia">Historia</a>
+            <a href="#galeria">Galería</a>
+            <a href="#discografia">Discografía</a>
+            <a href="#integrantes">Integrantes</a>
+            <a href="#shows">Shows</a>
+            <a href="#equipos">Equipos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="video-hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="logo-barbeta.png" alt="BARBETA" class="hero-logo" loading="lazy">
+            <p class="slogan">QUE SIGA EL ROCK AND ROLL</p>
+            <p>Power trio de Garage Rock formado a mediados de 2010. Su sonido se distingue por la intensidad de sus riffs y la fusión de matices.</p>
+            <div class="hero-buttons">
+                <a href="#shows" class="btn">Próximos Shows</a>
+                <a href="https://www.instagram.com/barbetaoficial/" target="_blank" class="btn btn-secondary">Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-section">
+        <div class="marquee">
+            <div class="marquee-item"><span>◆</span> Rock en Vivo</div>
+            <div class="marquee-item"><span>◆</span> Garage Rock</div>
+            <div class="marquee-item"><span>◆</span> Producción Musical</div>
+            <div class="marquee-item"><span>◆</span> Eventos Privados</div>
+            <div class="marquee-item"><span>◆</span> Power Trio</div>
+            <div class="marquee-item"><span>◆</span> Rock Chileno</div>
+            <div class="marquee-item"><span>◆</span> Riffs Intensos</div>
+            <div class="marquee-item"><span>◆</span> Música en Vivo</div>
+            <div class="marquee-item"><span>◆</span> Rock en Vivo</div>
+            <div class="marquee-item"><span>◆</span> Garage Rock</div>
+            <div class="marquee-item"><span>◆</span> Producción Musical</div>
+            <div class="marquee-item"><span>◆</span> Eventos Privados</div>
+            <div class="marquee-item"><span>◆</span> Power Trio</div>
+            <div class="marquee-item"><span>◆</span> Rock Chileno</div>
+            <div class="marquee-item"><span>◆</span> Riffs Intensos</div>
+            <div class="marquee-item"><span>◆</span> Música en Vivo</div>
+        </div>
+    </div>
+
+    <!-- Historia -->
+    <section class="historia-section" id="historia">
+        <h2 class="section-title reveal">HISTORIA</h2>
+        <p class="section-subtitle reveal">Barbeta es un power trio de Garage Rock formado a mediados de 2010. Su sonido se distingue por la intensidad de sus riffs y la fusión de matices.</p>
+        <div class="historia-grid">
+            <div class="historia-card reveal">
+                <img src="concierto-01.jpg" alt="Concierto BARBETA" loading="lazy">
+                <div class="historia-card-content">
+                    <h3>Orígenes</h3>
+                    <p>Formados en 2010 en Santiago, Chile. La banda nace de la pasión compartida por el rock crudo y la energía del garage rock.</p>
+                </div>
+            </div>
+            <div class="historia-card reveal">
+                <img src="concierto-02.jpg" alt="Tocata BARBETA" loading="lazy">
+                <div class="historia-card-content">
+                    <h3>Primeros Shows</h3>
+                    <p>Empezaron tocando en bares y locales underground de Santiago, ganándose una reputación por sus presentaciones intensas y enérgicas.</p>
+                </div>
+            </div>
+            <div class="historia-card reveal">
+                <img src="concierto-03.jpg" alt="Gira BARBETA" loading="lazy">
+                <div class="historia-card-content">
+                    <h3>Evolución</h3>
+                    <p>A lo largo de los años han perfeccionado su sonido distintivo, mezclando riffs potentes con matices únicos que los definen.</p>
+                </div>
+            </div>
+            <div class="historia-card reveal">
+                <img src="concierto-04.jpg" alt="Presentación BARBETA" loading="lazy">
+                <div class="historia-card-content">
+                    <h3>Actualidad</h3>
+                    <p>Hoy continúan activos, grabando nuevo material y llevando su música a cada rincón. ¡Que siga el rock and roll!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Showcase -->
+    <section class="video-showcase" id="video">
+        <h2 class="section-title reveal">EN ESTUDIO</h2>
+        <p class="section-subtitle reveal">Un vistazo detrás de cámaras de nuestras sesiones de grabación</p>
+        <div class="video-container reveal">
+            <video controls preload="metadata" style="max-height: 70vh; width: auto; max-width: 100%; margin: 0 auto; display: block;">
+                <source src="video-showcase.mp4" type="video/mp4">
+            </video>
+            <div class="video-caption" style="text-align: center; padding: 20px; background: var(--color-dark-card); border-top: 1px solid rgba(255, 0, 170, 0.2);">
+                <h3 style="font-family: var(--font-title); font-size: 1.8rem; color: var(--color-primary); letter-spacing: 3px; margin-bottom: 5px;">BARBETA EN EL ESTUDIO</h3>
+                <p style="color: var(--color-text-muted); font-size: 0.95rem;">Grabando nuevo material - 2026</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section class="galeria-section" id="galeria">
+        <h2 class="section-title reveal">GALERÍA</h2>
+        <p class="section-subtitle reveal">Momentos capturados en conciertos, tocatas y sesiones</p>
+        <div class="galeria-filters reveal">
+            <button class="filter-btn active" data-filter="all">Todo</button>
+            <button class="filter-btn" data-filter="conciertos">Conciertos</button>
+            <button class="filter-btn" data-filter="tocatas">Tocatas</button>
+            <button class="filter-btn" data-filter="backstage">Backstage</button>
+        </div>
+        <div class="galeria-grid">
+            <div class="galeria-item reveal" data-category="conciertos" onclick="openLightbox('foto-01.jpg')"><img src="foto-01.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Concierto</span></div></div>
+            <div class="galeria-item reveal" data-category="tocatas" onclick="openLightbox('foto-02.jpg')"><img src="foto-02.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Tocata</span></div></div>
+            <div class="galeria-item reveal" data-category="backstage" onclick="openLightbox('foto-03.jpg')"><img src="foto-03.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Backstage</span></div></div>
+            <div class="galeria-item reveal" data-category="conciertos" onclick="openLightbox('foto-04.jpg')"><img src="foto-04.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Concierto</span></div></div>
+            <div class="galeria-item reveal" data-category="tocatas" onclick="openLightbox('foto-05.jpg')"><img src="foto-05.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Tocata</span></div></div>
+            <div class="galeria-item reveal" data-category="backstage" onclick="openLightbox('foto-06.jpg')"><img src="foto-06.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Backstage</span></div></div>
+            <div class="galeria-item reveal" data-category="conciertos" onclick="openLightbox('foto-07.jpg')"><img src="foto-07.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Concierto</span></div></div>
+            <div class="galeria-item reveal" data-category="tocatas" onclick="openLightbox('foto-08.jpg')"><img src="foto-08.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Tocata</span></div></div>
+            <div class="galeria-item reveal" data-category="backstage" onclick="openLightbox('foto-09.jpg')"><img src="foto-09.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Backstage</span></div></div>
+            <div class="galeria-item reveal" data-category="conciertos" onclick="openLightbox('foto-10.jpg')"><img src="foto-10.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Concierto</span></div></div>
+            <div class="galeria-item reveal" data-category="tocatas" onclick="openLightbox('foto-11.jpg')"><img src="foto-11.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Tocata</span></div></div>
+            <div class="galeria-item reveal" data-category="backstage" onclick="openLightbox('foto-12.jpg')"><img src="foto-12.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Backstage</span></div></div>
+            <div class="galeria-item reveal" data-category="conciertos" onclick="openLightbox('foto-13.jpg')"><img src="foto-13.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Concierto</span></div></div>
+            <div class="galeria-item reveal" data-category="tocatas" onclick="openLightbox('foto-14.jpg')"><img src="foto-14.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Tocata</span></div></div>
+            <div class="galeria-item reveal" data-category="backstage" onclick="openLightbox('foto-15.jpg')"><img src="foto-15.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Backstage</span></div></div>
+            <div class="galeria-item reveal" data-category="conciertos" onclick="openLightbox('foto-16.jpg')"><img src="foto-16.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Concierto</span></div></div>
+            <div class="galeria-item reveal" data-category="tocatas" onclick="openLightbox('foto-17.jpg')"><img src="foto-17.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Tocata</span></div></div>
+            <div class="galeria-item reveal" data-category="backstage" onclick="openLightbox('foto-18.jpg')"><img src="foto-18.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Backstage</span></div></div>
+            <div class="galeria-item reveal" data-category="conciertos" onclick="openLightbox('foto-19.jpg')"><img src="foto-19.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Concierto</span></div></div>
+            <div class="galeria-item reveal" data-category="tocatas" onclick="openLightbox('foto-20.jpg')"><img src="foto-20.jpg" alt="BARBETA" loading="lazy"><div class="galeria-item-overlay"><span>Tocata</span></div></div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close">×</button>
+        <img src="" alt="BARBETA" id="lightbox-img">
+    </div>
+
+    <!-- Discografia -->
+    <section class="discografia-section" id="discografia">
+        <h2 class="section-title reveal">DISCOGRAFÍA</h2>
+        <div class="discografia-logo reveal">
+            <img src="logo-barbeta-transparente.png" alt="BARBETA" loading="lazy">
+        </div>
+        <p class="section-subtitle reveal">Nuestros lanzamientos y producciones musicales</p>
+        <div class="discografia-grid">
+            <div class="disco-card reveal">
+                <span class="disco-icon">🎸</span>
+                <h3>EP Debut</h3>
+                <p>Primer material de estudio que marcó el inicio de nuestra trayectoria musical con sonido garage rock puro.</p>
+            </div>
+            <div class="disco-card reveal">
+                <span class="disco-icon">🎵</span>
+                <h3>Sencillos</h3>
+                <p>Varios sencillos lanzados a lo largo de los años mostrando la evolución de nuestro sonido característico.</p>
+            </div>
+            <div class="disco-card reveal">
+                <span class="disco-icon">🎤</span>
+                <h3>En Vivo</h3>
+                <p>Registros en vivo de nuestras presentaciones más intensas capturando la energía del escenario.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrantes -->
+    <section class="integrantes-section" id="integrantes">
+        <h2 class="section-title reveal">INTEGRANTES</h2>
+        <p class="section-subtitle reveal">El power trio que hace vibrar el escenario</p>
+        <div class="integrantes-grid">
+            <div class="integrante-card reveal">
+                <div class="integrante-avatar">V</div>
+                <h3>Voz & Guitarra</h3>
+                <p class="role">Vocalista Principal</p>
+                <p>Líder y voz principal de la banda. Su estilo vocal distintivo y riffs potentes definen el sonido de Barbeta.</p>
+            </div>
+            <div class="integrante-card reveal">
+                <div class="integrante-avatar">B</div>
+                <h3>Bajo</h3>
+                <p class="role">Bajista</p>
+                <p>La base rítmica que sostiene cada canción con líneas de bajo contundentes y llenas de groove.</p>
+            </div>
+            <div class="integrante-card reveal">
+                <div class="integrante-avatar">D</div>
+                <h3>Batería</h3>
+                <p class="role">Baterista</p>
+                <p>La fuerza detrás del kit. Ritmos poderosos y dinámicos que impulsan cada presentación al máximo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proximos Shows -->
+    <section class="shows-section" id="shows">
+        <h2 class="section-title reveal">PRÓXIMOS SHOWS</h2>
+        <p class="section-subtitle reveal">No te pierdas nuestras próximas presentaciones en vivo</p>
+        <div class="shows-list">
+            <div class="show-item reveal">
+                <div class="show-date">
+                    <div class="day">15</div>
+                    <div class="month">JUL</div>
+                </div>
+                <div class="show-info">
+                    <h4>Rock al Parque</h4>
+                    <p>Santiago, Chile - Parque O'Higgins</p>
+                </div>
+                <button class="show-btn">Info</button>
+            </div>
+            <div class="show-item reveal">
+                <div class="show-date">
+                    <div class="day">22</div>
+                    <div class="month">AGO</div>
+                </div>
+                <div class="show-info">
+                    <h4>Tocata Underground</h4>
+                    <p>Bar La Caverna, Santiago</p>
+                </div>
+                <button class="show-btn">Info</button>
+            </div>
+            <div class="show-item reveal">
+                <div class="show-date">
+                    <div class="day">05</div>
+                    <div class="month">SEP</div>
+                </div>
+                <div class="show-info">
+                    <h4>Festival de Rock</h4>
+                    <p>Teatro Caupolicán, Santiago</p>
+                </div>
+                <button class="show-btn">Info</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipos -->
+    <section class="equipos-section" id="equipos">
+        <h2 class="section-title reveal">EQUIPOS</h2>
+        <p class="section-subtitle reveal">El gear que da vida a nuestro sonido</p>
+        <div class="equipos-grid">
+            <div class="equipo-card reveal">
+                <span class="icon">🎸</span>
+                <h3>Guitarras</h3>
+                <p>Gibson Les Paul, Fender Stratocaster y pedales de efectos Marshall para lograr tonos distintivos.</p>
+            </div>
+            <div class="equipo-card reveal">
+                <span class="icon">🥁</span>
+                <h3>Batería</h3>
+                <p>Pearl Export Series con platillos Zildjian. Sonido potente y versátil para cada estilo.</p>
+            </div>
+            <div class="equipo-card reveal">
+                <span class="icon">🔊</span>
+                <h3>Amplificación</h3>
+                <p>Amplificadores Marshall y Fender. El clásico sonido del rock en su máxima expresión.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features - Por que elegirnos -->
+    <section class="features-section" id="porque">
+        <h2 class="section-title reveal">¿POR QUÉ BARBETA?</h2>
+        <p class="section-subtitle reveal">Lo que nos hace diferentes en el escenario del rock chileno</p>
+        <div class="features-grid">
+            <div class="feature-card reveal">
+                <div class="feature-icon">⚡</div>
+                <h3>ENERGÍA BRUTAL</h3>
+                <p>Cada presentación es una explosión de energía en el escenario. No hay show aburrido cuando Barbeta toca.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">🎸</div>
+                <h3>SONIDO ÚNICO</h3>
+                <p>La fusión de riffs intensos con matices únicos crea un sonido inconfundible que nos define como banda.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">🔥</div>
+                <h3>PASIÓN REAL</h3>
+                <p>Más de una década en el rock chileno. La pasión por la música es lo que nos mantiene en el camino.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="cta">
+        <h2 class="reveal">¿QUIERES CONTRATARNOS?</h2>
+        <p class="reveal">Lleva la energía de Barbeta a tu evento, fiesta o festival. ¡Hagamos vibrar juntos el escenario!</p>
+        <div class="hero-buttons reveal">
+            <a href="https://wa.me/569xxxxxxxx" target="_blank" class="btn">WhatsApp</a>
+            <a href="https://www.instagram.com/barbetaoficial/" target="_blank" class="btn btn-secondary">Instagram</a>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <section class="mapa-section" id="mapa">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106453.03843166585!2d-70.66898695!3d-33.4488897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5410425af21%3A0x8475d53c400f0931!2sSantiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1700000000000!5m2!1ses!2scl" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contacto-section" id="contacto">
+        <h2 class="section-title reveal">CONTACTO</h2>
+        <p class="section-subtitle reveal">Conecta con nosotros para shows, colaboraciones o simplemente saludar</p>
+        <div class="contacto-grid">
+            <a href="https://wa.me/569xxxxxxxx" target="_blank" class="contacto-card reveal">
+                <span class="icon">💬</span>
+                <h3>WhatsApp</h3>
+                <p>+56 9 xxxx xxxx</p>
+            </a>
+            <a href="https://www.instagram.com/barbetaoficial/" target="_blank" class="contacto-card reveal">
+                <span class="icon">📸</span>
+                <h3>Instagram</h3>
+                <p>@barbetaoficial</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <img src="logo-barbeta.png" alt="BARBETA" class="footer-logo" loading="lazy">
+        <p>Que siga el rock and roll</p>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/barbetaoficial/" target="_blank" aria-label="Instagram">📸</a>
+            <a href="https://wa.me/569xxxxxxxx" target="_blank" aria-label="WhatsApp">💬</a>
+        </div>
+        <div class="footer-copy">
+            <p>© 2026 BARBETA. Todos los derechos reservados. | Santiago, Chile</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('nav');
+        menuToggle.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Lightbox
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Gallery filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galeriaItems = document.querySelectorAll('.galeria-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const filter = this.dataset.filter;
+
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                galeriaItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 10);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(err => console.log('SW registration failed'));
+        }
+    </script>
+</body>
+</html>

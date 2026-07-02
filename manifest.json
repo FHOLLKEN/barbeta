@@ -1,0 +1,20 @@
+{
+  "name": "BARBETA - Banda de Rock",
+  "short_name": "BARBETA",
+  "description": "Power trio de Garage Rock formado a mediados de 2010. Que siga el rock and roll!",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0F",
+  "theme_color": "#FF00AA",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "logo-barbeta.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["music", "entertainment"],
+  "lang": "es-CL"
+}

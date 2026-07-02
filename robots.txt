@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://barbeta.cl/sitemap.xml
+
+# BARBETA - Banda de Rock
+# Power trio de Garage Rock formado a mediados de 2010
